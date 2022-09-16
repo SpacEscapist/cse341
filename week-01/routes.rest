@@ -1,0 +1,8 @@
+// LOCALHOST
+### Get all contacts
+GET http://localhost:3000
+
+
+// PRODUCTION
+### Get all contacts
+GET https://branden-cse341.onrender.com
