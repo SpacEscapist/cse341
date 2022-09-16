@@ -4,8 +4,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-// Create a route using a GET request for the url at our root path.
-// the GET function requires 2 parameters, a path and a function with a request(req) and response(res) parameter
+// Require the routes folder when our browser is at the root URL
 app.use("/", require("./routes"));
 
 app.listen(port, () => {
