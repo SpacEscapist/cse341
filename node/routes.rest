@@ -1,3 +1,9 @@
+// REST - stands for REpresentational State Transfer
+// RESTful API - It is basically an API service that utilizes CRUD operations with HTTP requests 
+// -- POST=CREATE, GET=READ, PUT=UPDATE, DELETE=DELETE
+// -- The server will "expose" a bunch of services that are accessible via the HTTP protocal to certain endpoints
+// -- The client (our API service) can then directly call these services by sending HTTP requests
+
 // LOCALHOST
 ### Get all contacts
 GET http://localhost:3000

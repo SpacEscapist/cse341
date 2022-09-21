@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // Require the routes folder when our browser is at the root URL
-app.use("/", require("./routes"));
+app.use("/", require("./src/routes"));
 
 app.listen(port, () => {
   console.log(`Server is listening on port:${port}`);
