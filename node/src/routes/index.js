@@ -1,12 +1,13 @@
-// Use the "express" library and use express's built-in Router() function. Set to a variable called "routes"
-const routes = require("express").Router();
+const router = require("express").Router();
+const contactsRoute = require("./contacts");
 
-// Import name.js file from our controllers folder.
-const NameController = require("../controllers/contacts");
+// Middleware
+router.use("/contacts", contactsRoute);
 
-// Create a route using a GET request for the url at our root path.
-// the GET function requires 2 parameters, a path and a function that creates our request/response
-routes.get("/", NameController.get_person_name);
+// Current route
+router.get("/", (req, res) => {
+  res.send("At the index URL");
+});
 
 // Export route
-module.exports = routes;
+module.exports = router;

@@ -4,11 +4,28 @@
 // -- The server will "expose" a bunch of services that are accessible via the HTTP protocal to certain endpoints
 // -- The client (our API service) can then directly call these services by sending HTTP requests
 
+//============================================================================================
 // LOCALHOST
+
 ### Get all contacts
-GET http://localhost:3000
+GET http://localhost:8080/contacts
+
+### Get one contact by ID
+GET http://localhost:8080/contacts/632b8ad92be31376f414f4ef
+
+### Get one contact by ID
+GET http://localhost:8080/contacts/632b89222be31376f414f4ec
+
+### Get one contact by ID
+GET http://localhost:8080/contacts/632b8b0c2be31376f414f4f0
+
+### Get one contact by ID
+GET http://localhost:8080/contacts/632b8b642be31376f414f4f1
 
 
+
+//============================================================================================
 // PRODUCTION
+
 ### Get all contacts
 GET https://branden-cse341.onrender.com
