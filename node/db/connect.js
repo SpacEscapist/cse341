@@ -1,7 +1,6 @@
 // Create a schema for our database
 const mongoose = require("mongoose");
 const ContactSchema = mongoose.Schema({
-  id: Number,
   firstName: String,
   lastName: String,
   email: String,

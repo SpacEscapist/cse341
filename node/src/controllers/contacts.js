@@ -1,4 +1,3 @@
-const router = require("express").Router();
 const Contacts = require("../../db/connect");
 const { ObjectId } = require("mongodb");
 
