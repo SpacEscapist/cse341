@@ -28,4 +28,16 @@ GET http://localhost:8080/contacts/632b8b642be31376f414f4f1
 // PRODUCTION
 
 ### Get all contacts
-GET https://branden-cse341.onrender.com
+GET https://branden-cse341.onrender.com/contacts
+
+### Get one contact by ID
+GET https://branden-cse341.onrender.com/contacts/632b8ad92be31376f414f4ef
+
+### Get one contact by ID
+GET https://branden-cse341.onrender.com/contacts/632b89222be31376f414f4ec
+
+### Get one contact by ID
+GET https://branden-cse341.onrender.com/contacts/632b8b0c2be31376f414f4f0
+
+### Get one contact by ID
+GET https://branden-cse341.onrender.com/contacts/632b8b642be31376f414f4f1
