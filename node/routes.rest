@@ -8,19 +8,19 @@
 // LOCALHOST
 
 ### Get all contacts
-GET http://localhost:8080/contacts
+GET http://localhost:3000/contacts
 
 ### Get one contact by ID
-GET http://localhost:8080/contacts/632b8ad92be31376f414f4ef
+GET http://localhost:3000/contacts/632b8ad92be31376f414f4ef
 
 ### Get one contact by ID
-GET http://localhost:8080/contacts/632b89222be31376f414f4ec
+GET http://localhost:3000/contacts/632b89222be31376f414f4ec
 
 ### Get one contact by ID
-GET http://localhost:8080/contacts/632b8b0c2be31376f414f4f0
+GET http://localhost:3000/contacts/632b8b0c2be31376f414f4f0
 
 ### Get one contact by ID
-GET http://localhost:8080/contacts/632b8b642be31376f414f4f1
+GET http://localhost:3000/contacts/632b8b642be31376f414f4f1
 
 
 

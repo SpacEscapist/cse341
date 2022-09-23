@@ -1,11 +1,12 @@
 const express = require("express");
-const app = express();
-const port = 8080;
+const port = 3000;
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const indexRoute = require("./src/routes/index");
+const app = express();
 
 require("dotenv/config");
+
+const indexRoute = require("./src/routes/index");
 
 // Middleware
 app.use(bodyParser.json());
