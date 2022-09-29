@@ -16,12 +16,29 @@ GET http://localhost:3000/contacts/632b8ad92be31376f414f4ef
 ### Get one contact by ID
 GET http://localhost:3000/contacts/632b89222be31376f414f4ec
 
-### Get one contact by ID
-GET http://localhost:3000/contacts/632b8b0c2be31376f414f4f0
+### Create new contact
+POST http://localhost:3000/contacts
+Content-Type: application/json
 
-### Get one contact by ID
-GET http://localhost:3000/contacts/632b8b642be31376f414f4f1
+{
+    "firstName": "Pluto",
+    "lastName": "Dog",
+    "email": "pluto@stillaplanet.com",
+    "favoriteColor": "Yellow",
+    "birthday": "9/5/1935"
+}
 
+### Update contact
+PUT http://localhost:3000/contacts/6335037808bd08de35ff0fff
+Content-Type: application/json
+
+{
+    "firstName": "Super",
+    "lastName": "Mario"
+}
+
+### Delete contact
+DELETE http://localhost:3000/contacts/6334cc6f2da7f865e2bd59d3
 
 
 //============================================================================================
@@ -36,8 +53,26 @@ GET https://branden-cse341.onrender.com/contacts/632b8ad92be31376f414f4ef
 ### Get one contact by ID
 GET https://branden-cse341.onrender.com/contacts/632b89222be31376f414f4ec
 
-### Get one contact by ID
-GET https://branden-cse341.onrender.com/contacts/632b8b0c2be31376f414f4f0
+### Create new contact
+POST https://branden-cse341.onrender.com/contacts
+Content-Type: application/json
 
-### Get one contact by ID
-GET https://branden-cse341.onrender.com/contacts/632b8b642be31376f414f4f1
+{
+    "firstName": "Pluto",
+    "lastName": "Dog",
+    "email": "pluto@stillaplanet.com",
+    "favoriteColor": "Yellow",
+    "birthday": "9/5/1935"
+}
+
+### Update contact
+PUT https://branden-cse341.onrender.com/contacts/6335037808bd08de35ff0fff
+Content-Type: application/json
+
+{
+    "firstName": "Super",
+    "lastName": "Mario"
+}
+
+### Delete contact
+DELETE https://branden-cse341.onrender.com/contacts/6334cc6f2da7f865e2bd59d3
