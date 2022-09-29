@@ -45,28 +45,28 @@ DELETE http://localhost:3000/contacts/632b89222be31376f414f4ec
 // PRODUCTION
 
 ### Get all contacts
-GET https://branden-cse341.onrender.com/contacts
+GET https://branden-cse341-node.onrender.com/contacts
 
 ### Get one contact by ID
-GET https://branden-cse341.onrender.com/contacts/632b8ad92be31376f414f4ef
+GET https://branden-cse341-node.onrender.com/contacts/632b8ad92be31376f414f4ef
 
 ### Get one contact by ID
-GET https://branden-cse341.onrender.com/contacts/632b89222be31376f414f4ec
+GET https://branden-cse341-node.onrender.com/contacts/632b8b642be31376f414f4f1
 
 ### Create new contact
-POST https://branden-cse341.onrender.com/contacts
+POST https://branden-cse341-node.onrender.com/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Pluto",
-    "lastName": "Dog",
-    "email": "pluto@stillaplanet.com",
-    "favoriteColor": "Yellow",
-    "birthday": "9/5/1935"
+    "firstName": "Goofy",
+    "lastName": "Goof",
+    "email": "goofy@gooftroop.com",
+    "favoriteColor": "Orange",
+    "birthday": "5/25/1932"
 }
 
 ### Update contact
-PUT https://branden-cse341.onrender.com/contacts/6335037808bd08de35ff0fff
+PUT https://branden-cse341-node.onrender.com/contacts/63361d857b3334bb3711c706
 Content-Type: application/json
 
 {
@@ -75,4 +75,4 @@ Content-Type: application/json
 }
 
 ### Delete contact
-DELETE https://branden-cse341.onrender.com/contacts/633506b4b5d494032fc98a2f
+DELETE https://branden-cse341-node.onrender.com/contacts/63361d857b3334bb3711c706
