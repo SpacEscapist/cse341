@@ -65,7 +65,7 @@ const deleteContact = async (req, res) => {
   try {
     const contactId = new ObjectId(req.params.id);
     await Contacts.deleteOne({ _id: contactId });
-    res.sendStatus(204);
+    res.sendStatus(200);
   } catch (err) {
     res.status(500).json({ message: err });
   }
