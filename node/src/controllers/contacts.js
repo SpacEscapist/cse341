@@ -62,12 +62,12 @@ const updateContact = async (req, res) => {
 
 // Delete a contact
 const deleteContact = async (req, res) => {
-  try {
-    const contactId = new ObjectId(req.params.id);
-    await Contacts.deleteOne({ _id: contactId });
-    res.sendStatus(204);
-  } catch (err) {
-    res.status(500).json({ message: err });
+  const contactId = new ObjectId(req.params.id);
+  const action = Contacts.deleteOne({ _id: contactId });
+  if ((await action).deletedCount > 0) {
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(500).json(action.error);
   }
 };
 
