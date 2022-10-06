@@ -8,8 +8,13 @@ const app = express();
 require("dotenv/config");
 
 // Middleware
-app.use(bodyParser.json());
-app.use("/", indexRoute);
+app
+  .use(bodyParser.json())
+  .use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+  })
+  .use("/", indexRoute);
 
 // Connect to database
 mongoose.connect(process.env.DB_CONNECTION, () => {

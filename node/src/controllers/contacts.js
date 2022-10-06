@@ -3,16 +3,18 @@ const { ObjectId } = require("mongodb");
 
 // Get all contacts
 const getAllContacts = async (req, res) => {
+  // #swagger.description = "Get all contacts"
   try {
     const allContacts = await Contacts.find();
     res.json(allContacts);
   } catch (err) {
-    res.json({ message: err });
+    res.status(500).json(err);
   }
 };
 
 // Get one contact
 const getOneContact = async (req, res) => {
+  // #swagger.description = "Get one contact"
   try {
     const contactId = new ObjectId(req.params.id);
     const oneContact = await Contacts.findOne({
@@ -20,12 +22,13 @@ const getOneContact = async (req, res) => {
     });
     res.json(oneContact);
   } catch (err) {
-    res.json({ message: err });
+    res.status(500).json(err);
   }
 };
 
 // Create a new contact
 const createContact = async (req, res) => {
+  // #swagger.description = "Create new contact"
   try {
     const addContact = new Contacts({
       firstName: req.body.firstName,
@@ -38,12 +41,13 @@ const createContact = async (req, res) => {
       res.status(201).json(`New contact ID: ${result.id}`);
     });
   } catch (err) {
-    res.status(500).json({ message: err });
+    res.status(500).json(err);
   }
 };
 
 // Update a contact
 const updateContact = async (req, res) => {
+  // #swagger.description = "Update existing contact"
   try {
     const contactId = new ObjectId(req.params.id);
     const update = {
@@ -56,18 +60,23 @@ const updateContact = async (req, res) => {
     await Contacts.findOneAndUpdate({ _id: contactId }, update);
     res.sendStatus(204);
   } catch (err) {
-    res.status(500).json({ message: err });
+    res.status(500).json(err);
   }
 };
 
 // Delete a contact
 const deleteContact = async (req, res) => {
-  const contactId = new ObjectId(req.params.id);
-  const action = Contacts.deleteOne({ _id: contactId });
-  if ((await action).deletedCount > 0) {
-    res.sendStatus(200);
-  } else {
-    res.sendStatus(500).json(action.error);
+  // #swagger.description = "Delete a contact"
+  try {
+    const contactId = new ObjectId(req.params.id);
+    const action = Contacts.deleteOne({ _id: contactId });
+    if ((await action).deletedCount > 0) {
+      res.sendStatus(200);
+    } else {
+      res.sendStatus(500).json(action.error);
+    }
+  } catch (err) {
+    res.status(500).json(err);
   }
 };
 

@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const contactsRoute = require("./contacts");
 
 // Middleware
-router.use("/contacts", contactsRoute);
+router.use("/contacts", require("./contacts"));
+router.use("/api-docs", require("./docs"));
 
 // Current route
 router.get("/", (req, res) => {
