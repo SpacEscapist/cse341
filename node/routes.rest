@@ -13,9 +13,6 @@ GET http://localhost:3000/contacts
 ### Get one contact by ID
 GET http://localhost:3000/contacts/632b8ad92be31376f414f4ef
 
-### Get one contact by ID
-GET http://localhost:3000/contacts/633604dec701d9c07c158239
-
 ### Create new contact
 POST http://localhost:3000/contacts
 Content-Type: application/json
@@ -49,9 +46,6 @@ GET https://branden-cse341-node.onrender.com/contacts
 
 ### Get one contact by ID
 GET https://branden-cse341-node.onrender.com/contacts/632b8ad92be31376f414f4ef
-
-### Get one contact by ID
-GET https://branden-cse341-node.onrender.com/contacts/632b8b642be31376f414f4f1
 
 ### Create new contact
 POST https://branden-cse341-node.onrender.com/contacts
