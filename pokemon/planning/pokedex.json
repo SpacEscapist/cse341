@@ -1,0 +1,93 @@
+[
+    {
+        "pokemonName": "Pikachu",
+        "elementType": [
+            "Electric"
+        ],
+        "abilities": [
+            "Thundershock",
+            "Kick",
+            "Lightning Rod"
+        ],
+        "healthPower": 35,
+        "attack": 55,
+        "defense": 40,
+        "evolutions": [
+            "Raichu"
+        ]
+    },
+    {
+        "pokemonName": "Squirtle",
+        "elementType": [
+            "Water"
+        ],
+        "abilities": [
+            "Water Cannon",
+            "Surf",
+            "Torrent",
+            "Headbutt"
+        ],
+        "healthPower": 44,
+        "attack": 48,
+        "defense": 65,
+        "evolutions": [
+            "Wartortle",
+            "Blastoise"
+        ]
+    },
+    {
+        "pokemonName": "Charmander",
+        "elementType": [
+            "Fire"
+        ],
+        "abilities": [
+            "Flame",
+            "Blaze",
+            "Fire Ring"
+        ],
+        "healthPower": 39,
+        "attack": 52,
+        "defense": 43,
+        "evolutions": [
+            "Charmeleon",
+            "Charizard"
+        ]
+    },
+    {
+        "pokemonName": "Venonat",
+        "elementType": [
+            "Bug",
+            "Poison"
+        ],
+        "abilities": [
+            "Sleep Powder",
+            "Poison Dart",
+            "Tackle"
+        ],
+        "healthPower": 60,
+        "attack": 55,
+        "defense": 50,
+        "evolutions": [
+            "Venomoth"
+        ]
+    },
+    {
+        "pokemonName": "Geodude",
+        "elementType": [
+            "Rock",
+            "Ground"
+        ],
+        "abilities": [
+            "Harden",
+            "Rock Slam",
+            "Landslide"
+        ],
+        "healthPower": 50,
+        "attack": 40,
+        "defense": 80,
+        "evolutions": [
+            "Graveler",
+            "Golem"
+        ]
+    }
+]

@@ -1,0 +1,47 @@
+// REST - stands for REpresentational State Transfer
+// RESTful API - It is basically an API service that utilizes CRUD operations with HTTP requests 
+// -- POST=CREATE, GET=READ, PUT=UPDATE, DELETE=DELETE
+// -- The server will "expose" a bunch of services that are accessible via the HTTP protocal to certain endpoints
+// -- The client (our API service) can then directly call these services by sending HTTP requests
+
+//============================================================================================
+
+// LOCALHOST
+
+### Get all trainers
+GET http://localhost:3000/trainers
+
+### Get one trainer
+GET http://localhost:3000/trainers/6349fd726b934afe1e97861d
+
+### Create new trainer
+POST http://localhost:3000/trainers
+Content-Type: application/json
+
+{
+    "firstName": "Billy",
+    "lastName": "Bob",
+    "nickname": "Bug Catcher",
+    "gymBadgesCollected": ["Boulder", "Cascade"],
+    "pokemonCaught": 22
+}
+
+### Get all pokemon
+GET http://localhost:3000/pokedex
+
+### Get one pokemon
+GET http://localhost:3000/pokedex/634a01ac6b934afe1e9eef87
+
+### Create new pokemon
+POST http://localhost:3000/pokedex
+Content-Type: application/json
+
+{
+    "pokemonName": "Bulbasaur",
+    "element": ["Grass", "Poison"],
+    "abilities": ["Poison Powder", "Leech Seed", "Cut"],
+    "healthPower": 45,
+    "attack": 49,
+    "defense": 49,
+    "evolutions": ["Ivysaur", "Venusaur"]
+}

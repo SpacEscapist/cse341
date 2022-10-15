@@ -1,0 +1,24 @@
+--- DATABASE ----
+
+Trainers collection
+    _id                         | MongoDB_ID
+    firstName                   | String
+    lastName                    | String
+    nickname                    | String
+    gymBadgesCollected          | String []
+    pokemonCaught               | Number
+
+
+
+
+Pokedex collection
+
+    _id                         | MongoDB_ID
+    pokemonName                 | String
+    elementType                 | String []
+    abilities                   | String []
+    healthPower                 | Number
+    attack                      | Number
+    defense                     | Number
+    evolutions                  | String []
+

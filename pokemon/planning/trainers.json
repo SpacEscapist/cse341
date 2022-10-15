@@ -1,0 +1,61 @@
+[
+    {
+        "firstName": "Branden",
+        "lastName": "Torrance",
+        "nickname": "Wannabe-pokemaster",
+        "gymBadgesCollected": [
+            "Boulder Badge",
+            "Cascade Badge",
+            "Thunder Badge",
+            "Rainbow Badge" 
+        ],
+        "pokemonCaught": 56
+    },
+    {
+        "firstName": "Ash",
+        "lastName": "Ketchum",
+        "nickname": "Pokemaster",
+        "gymBadgesCollected": [
+            "Boulder Badge",
+            "Cascade Badge",
+            "Thunder Badge",
+            "Rainbow Badge",
+            "Soul Badge",
+            "Marsh Badge",
+            "Volcano Badge",
+            "Earth Badge"
+        ],
+        "pokemonCaught": 150
+    },
+    {
+        "firstName": "Brock",
+        "lastName": "Harrison",
+        "nickname": "Rock Solid",
+        "gymBadgesCollected": [
+            "Boulder Badge"
+        ],
+        "pokemonCaught": 37
+    },
+    {
+        "firstName": "Misty",
+        "lastName": "Mist",
+        "nickname": "Misty-eyed",
+        "gymBadgesCollected": [
+            "Cascade Badge"
+        ],
+        "pokemonCaught": 44
+    },
+    {
+        "firstName": "Blue",
+        "lastName": "Trainer",
+        "nickname": "Catch-em-all",
+        "gymBadgesCollected": [
+            "Boulder Badge",
+            "Cascade Badge",
+            "Thunder Badge",
+            "Rainbow Badge",
+            "Soul Badge"
+        ],
+        "pokemonCaught": 149
+    }
+]
