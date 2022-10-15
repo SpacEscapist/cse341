@@ -4,8 +4,8 @@
 // -- The server will "expose" a bunch of services that are accessible via the HTTP protocal to certain endpoints
 // -- The client (our API service) can then directly call these services by sending HTTP requests
 
-//============================================================================================
-
+//=====================================================================================================================
+//=====================================================================================================================
 // LOCALHOST
 
 ### Get all trainers
@@ -34,6 +34,48 @@ GET http://localhost:3000/pokedex/634a01ac6b934afe1e9eef87
 
 ### Create new pokemon
 POST http://localhost:3000/pokedex
+Content-Type: application/json
+
+{
+    "pokemonName": "Bulbasaur",
+    "element": ["Grass", "Poison"],
+    "abilities": ["Poison Powder", "Leech Seed", "Cut"],
+    "healthPower": 45,
+    "attack": 49,
+    "defense": 49,
+    "evolutions": ["Ivysaur", "Venusaur"]
+}
+
+//=====================================================================================================================
+//=====================================================================================================================
+// PRODUCTION
+
+### Get all trainers
+GET https://branden-cse341-pokemon.onrender.com/trainers
+
+### Get one trainer
+GET https://branden-cse341-pokemon.onrender.com/trainers/6349fd726b934afe1e97861d
+
+### Create new trainer
+POST https://branden-cse341-pokemon.onrender.com/trainers
+Content-Type: application/json
+
+{
+    "firstName": "Billy",
+    "lastName": "Bob",
+    "nickname": "Bug Catcher",
+    "gymBadgesCollected": ["Boulder", "Cascade"],
+    "pokemonCaught": 22
+}
+
+### Get all pokemon
+GET https://branden-cse341-pokemon.onrender.com/pokedex
+
+### Get one pokemon
+GET https://branden-cse341-pokemon.onrender.com/pokedex/634a01ac6b934afe1e9eef87
+
+### Create new pokemon
+POST https://branden-cse341-pokemon.onrender.com/pokedex
 Content-Type: application/json
 
 {
