@@ -25,7 +25,7 @@ module.exports.pokedexValidation = [
     .isString()
     .isLength({ min: 3 })
     .notEmpty(),
-  check("element", "Element type is required. Must be in array format.").isArray().notEmpty(),
+  check("elementType", "Element type is required. Must be in array format.").isArray().notEmpty(),
   check("abilities", "Must include at least one ability name. Must be in array format.")
     .isArray()
     .notEmpty(),

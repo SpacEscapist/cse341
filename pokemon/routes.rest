@@ -55,7 +55,7 @@ Content-Type: application/json
 
 {
     "pokemonName": "Bulbasaur",
-    "element": ["Grass", "Poison"],
+    "elementType": ["Grass", "Poison"],
     "abilities": ["Poison Powder", "Leech Seed", "Cut"],
     "healthPower": 45,
     "attack": 49,
@@ -69,7 +69,7 @@ Content-Type: application/json
 
 {
     "pokemonName": "Ivysaur",
-    "element": ["Grass", "Poison"],
+    "elementType": ["Grass", "Poison"],
     "abilities": ["Poison Powder", "Leech Seed", "Cut", "Skull Bash"],
     "healthPower": 65,
     "attack": 70,
@@ -131,7 +131,7 @@ Content-Type: application/json
 
 {
     "pokemonName": "Bulbasaur",
-    "element": ["Grass", "Poison"],
+    "elementType": ["Grass", "Poison"],
     "abilities": ["Poison Powder", "Leech Seed", "Cut"],
     "healthPower": 45,
     "attack": 49,
@@ -145,7 +145,7 @@ Content-Type: application/json
 
 {
     "pokemonName": "Ivysaur",
-    "element": ["Grass", "Poison"],
+    "elementType": ["Grass", "Poison"],
     "abilities": ["Poison Powder", "Leech Seed", "Cut", "Skull Bash"],
     "healthPower": 65,
     "attack": 70,
