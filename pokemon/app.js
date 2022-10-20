@@ -23,7 +23,7 @@ async function dbConnect() {
     await app.listen(port);
     console.log(`Server is listening on port:${port}`);
   } catch (error) {
-    console.log(`Database connection failed - ${error}`);
+    console.log("Database connection failed.", error);
   }
 }
 dbConnect();
