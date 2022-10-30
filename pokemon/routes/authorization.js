@@ -1,7 +1,6 @@
 const router = require("express").Router();
+const authorizationController = require("../controllers/authorization");
 
-router.get("/login", (req, res) => {
-  res.send("login endpoint/router");
-});
+router.get("/login", authorizationController.login);
 
 module.exports = router;
