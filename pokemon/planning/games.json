@@ -1,0 +1,27 @@
+[
+    {
+        "gameName": "Pokemon Red",
+        "releaseDate": "09/30/1998",
+        "platform": "Game Boy"
+    },
+    {
+        "gameName": "Pokemon Blue",
+        "releaseDate": "09/30/1998",
+        "platform": "Game Boy"
+    },
+    {
+        "gameName": "Pokemon Yellow",
+        "releaseDate": "10/01/1999",
+        "platform": "Game Boy"
+    },
+    {
+        "gameName": "Pokemon Ruby",
+        "releaseDate": "03/19/2003",
+        "platform": "Game Boy Advance"
+    },
+    {
+        "gameName": "Pokemon Let's Go, Pikachu!",
+        "releaseDate": "11/16/2018",
+        "platform": "Nintendo Switch"
+    }
+]

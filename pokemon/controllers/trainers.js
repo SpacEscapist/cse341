@@ -4,6 +4,7 @@ const { validationResult } = require("express-validator");
 
 // Get all trainers
 const getAllTrainers = async (req, res) => {
+  // #swagger.tags = ["Trainer Requests"]
   // #swagger.description = "Get all trainers"
   try {
     const allTrainers = await Trainers.find();
@@ -15,6 +16,7 @@ const getAllTrainers = async (req, res) => {
 
 // Get one trainer by ID
 const getOneTrainer = async (req, res) => {
+  // #swagger.tags = ["Trainer Requests"]
   // #swagger.description = "Get one trainer via ID"
 
   // Check for valid ID
@@ -35,7 +37,8 @@ const getOneTrainer = async (req, res) => {
 
 // Create new trainer
 const createTrainer = async (req, res) => {
-  // #swagger.description = "Create new trainer"
+  // #swagger.tags = ["Trainer Requests"]
+  // #swagger.description = "Create new trainer - (NOTE: This route requires authorization. Please see API description above for authorization details)"
 
   // Check for input errors
   const errors = validationResult(req);
@@ -61,7 +64,8 @@ const createTrainer = async (req, res) => {
 
 // Update a trainer by ID
 const updateTrainer = async (req, res) => {
-  // #swagger.description = "Update a trainer via ID"
+  // #swagger.tags = ["Trainer Requests"]
+  // #swagger.description = "Update a trainer via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)"
 
   // Check for valid ID
   if (!ObjectId.isValid(req.params.id)) {
@@ -92,7 +96,8 @@ const updateTrainer = async (req, res) => {
 
 // Delete a trainer by ID
 const deleteTrainer = async (req, res) => {
-  // #swagger.description = "Delete a trainer via ID"
+  // #swagger.tags = ["Trainer Requests"]
+  // #swagger.description = "Delete a trainer via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)"
 
   // Check for valid ID
   if (!ObjectId.isValid(req.params.id)) {

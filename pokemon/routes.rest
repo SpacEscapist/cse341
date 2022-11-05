@@ -5,17 +5,20 @@
 // -- The client (our API service) can then directly call these services by sending HTTP requests
 
 //=====================================================================================================================
-//=====================================================================================================================
 // LOCALHOST
+//=====================================================================================================================
+
+//=====================================================================================================================
+// ---TRAINERS---
 
 ### Get all trainers
-GET http://localhost:3000/trainers
+GET http://localhost:8080/trainers
 
 ### Get one trainer
-GET http://localhost:3000/trainers/6349fd726b934afe1e97861d
+GET http://localhost:8080/trainers/6349fd726b934afe1e97861d
 
 ### Create new trainer
-POST http://localhost:3000/trainers
+POST http://localhost:8080/trainers
 Content-Type: application/json
 
 {
@@ -27,7 +30,7 @@ Content-Type: application/json
 }
 
 ### Update a trainer
-PUT http://localhost:3000/trainers/6351be87defae0e6b11e0e56
+PUT http://localhost:8080/trainers/6351be87defae0e6b11e0e56
 Content-Type: application/json
 
 {
@@ -39,18 +42,19 @@ Content-Type: application/json
 }
 
 ### Delete a trainer
-DELETE http://localhost:3000/trainers/6351be87defae0e6b11e0e56
+DELETE http://localhost:8080/trainers/6351be87defae0e6b11e0e56
 
 //=====================================================================================================================
+// ---POKEDEX---
 
 ### Get all pokemon
-GET http://localhost:3000/pokedex
+GET http://localhost:8080/pokedex
 
 ### Get one pokemon
-GET http://localhost:3000/pokedex/634a01ac6b934afe1e9eef87
+GET http://localhost:8080/pokedex/634a01ac6b934afe1e9eef87
 
 ### Create new pokemon
-POST http://localhost:3000/pokedex
+POST http://localhost:8080/pokedex
 Content-Type: application/json
 
 {
@@ -64,7 +68,7 @@ Content-Type: application/json
 }
 
 ### Update a pokemon
-PUT http://localhost:3000/pokedex/6351c4ffbb749a413a32b500
+PUT http://localhost:8080/pokedex/6351c4ffbb749a413a32b500
 Content-Type: application/json
 
 {
@@ -78,11 +82,82 @@ Content-Type: application/json
 }
 
 ### Delete a pokemon
-DELETE http://localhost:3000/pokedex/6351c4ffbb749a413a32b500
+DELETE http://localhost:8080/pokedex/6351c4ffbb749a413a32b500
 
 //=====================================================================================================================
+// ---GYMS---
+
+### Get all gyms
+GET http://localhost:8080/gyms
+
+### Get one gym
+GET http://localhost:8080/gyms/6365dbca3ebf02caffa9f530
+
+### Create new gym
+POST http://localhost:8080/gyms
+Content-Type: application/json
+
+{
+    "gymBadgeName": "Marsh Badge",
+    "gymLocation": "Saffron City",
+    "gymLeaderName": "Sabrina",
+    "gymPokemonType": "Psychic"
+}
+
+### Update a gym
+PUT http://localhost:8080/gyms/6365de8722f8b8c875d4cd73
+Content-Type: application/json
+
+{
+    "gymBadgeName": "Volcano Badge",
+    "gymLocation": "Cinnabar Island",
+    "gymLeaderName": "Blaine",
+    "gymPokemonType": "Fire"
+}
+
+### Delete a gym
+DELETE http://localhost:8080/gyms/6365de8722f8b8c875d4cd73
+
+//=====================================================================================================================
+// ---GAMES---
+
+### Get all games
+GET http://localhost:8080/games
+
+### Get one game
+GET http://localhost:8080/games/6365dbca3ebf02caffa9f530
+
+### Create new game
+POST http://localhost:8080/games
+Content-Type: application/json
+
+{
+    "gameName": "Pokemon Gold",
+    "releaseDate": "10/15/2000",
+    "platform": "Game Boy Color",
+}
+
+### Update a game
+PUT http://localhost:8080/games/6365de8722f8b8c875d4c2a4
+Content-Type: application/json
+
+{
+    "gameName": "Pokemon Crystal",
+    "releaseDate": "07/29/2001",
+    "platform": "Game Boy Color",
+}
+
+### Delete a game
+DELETE http://localhost:8080/games/6365de8722f8b8c875d4c2a4
+
+
+
 //=====================================================================================================================
 // PRODUCTION
+//=====================================================================================================================
+
+//=====================================================================================================================
+// ---TRAINERS---
 
 ### Get all trainers
 GET https://branden-cse341-pokemon.onrender.com/trainers
@@ -118,6 +193,7 @@ Content-Type: application/json
 DELETE https://branden-cse341-pokemon.onrender.com/trainers/6351be87defae0e6b11e0e56
 
 //=====================================================================================================================
+// ---POKEDEX---
 
 ### Get all pokemon
 GET https://branden-cse341-pokemon.onrender.com/pokedex
@@ -155,3 +231,69 @@ Content-Type: application/json
 
 ### Delete a pokemon
 DELETE https://branden-cse341-pokemon.onrender.com/pokedex/6351c4ffbb749a413a32b500
+
+//=====================================================================================================================
+// ---GYMS---
+
+### Get all gyms
+GET https://branden-cse341-pokemon.onrender.com/gyms
+
+### Get one gym
+GET https://branden-cse341-pokemon.onrender.com/gyms/6365dbca3ebf02caffa9f530
+
+### Create new gym
+POST https://branden-cse341-pokemon.onrender.com/gyms
+Content-Type: application/json
+
+{
+    "gymBadgeName": "Marsh Badge",
+    "gymLocation": "Saffron City",
+    "gymLeaderName": "Sabrina",
+    "gymPokemonType": "Psychic"
+}
+
+### Update a gym
+PUT https://branden-cse341-pokemon.onrender.com/gyms/6365de8722f8b8c875d4cd73
+Content-Type: application/json
+
+{
+    "gymBadgeName": "Volcano Badge",
+    "gymLocation": "Cinnabar Island",
+    "gymLeaderName": "Blaine",
+    "gymPokemonType": "Fire"
+}
+
+### Delete a gym
+DELETE https://branden-cse341-pokemon.onrender.com/gyms/6365de8722f8b8c875d4cd73
+
+//=====================================================================================================================
+// ---GAMES---
+
+### Get all games
+GET https://branden-cse341-pokemon.onrender.com/games
+
+### Get one game
+GET https://branden-cse341-pokemon.onrender.com/games/6365dbca3ebf02caffa9f530
+
+### Create new game
+POST https://branden-cse341-pokemon.onrender.com/games
+Content-Type: application/json
+
+{
+    "gameName": "Pokemon Gold",
+    "releaseDate": "10/15/2000",
+    "platform": "Game Boy Color",
+}
+
+### Update a game
+PUT https://branden-cse341-pokemon.onrender.com/games/6365de8722f8b8c875d4c2a4
+Content-Type: application/json
+
+{
+    "gameName": "Pokemon Crystal",
+    "releaseDate": "07/29/2001",
+    "platform": "Game Boy Color",
+}
+
+### Delete a game
+DELETE https://branden-cse341-pokemon.onrender.com/games/6365de8722f8b8c875d4c2a4

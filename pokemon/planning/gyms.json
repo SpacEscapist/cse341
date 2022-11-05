@@ -1,0 +1,32 @@
+[
+    {
+        "gymBadgeName": "Boulder Badge",
+        "gymLocation": "Pewter City",
+        "gymLeaderName": "Brock",
+        "gymPokemonType": "Rock"
+    },
+    {
+        "gymBadgeName": "Cascade Badge",
+        "gymLocation": "Cerulean City",
+        "gymLeaderName": "Misty",
+        "gymPokemonType": "Water"
+    },
+    {
+        "gymBadgeName": "Thunder Badge",
+        "gymLocation": "Vermilion City",
+        "gymLeaderName": "Lt. Surge",
+        "gymPokemonType": "Electric"
+    },
+    {
+        "gymBadgeName": "Rainbow Badge",
+        "gymLocation": "Celadon City",
+        "gymLeaderName": "Erika",
+        "gymPokemonType": "Grass"
+    },
+    {
+        "gymBadgeName": "Soul Badge",
+        "gymLocation": "Fuchsia City",
+        "gymLeaderName": "Koga",
+        "gymPokemonType": "Poison"
+    }
+]

@@ -1,17 +1,24 @@
-const appConfig = require("../config/config");
-
-const authorizationController = {
-  login: (req, res) => {
-    const authorizationUrl = `${
-      appConfig.authorizationHost
-    }/authorize?response_type=code&client_id=${
-      appConfig.clientID
-    }&redirect_uri=${encodeURIComponent(
-      appConfig.redirectUrl
-    )}&state=1234&scope=openid%20profile%20email`;
-
-    res.redirect(authorizationUrl);
+// oidc stands for "openid connect"
+// Provides user with status if they are logged in or logged out
+const authorize = (req, res) => {
+  // #swagger.tags = ["Authorization Requests"]
+  // #swagger.description = "Inform user if they are logged in or not"
+  try {
+    res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
+  } catch (error) {
+    res.status(500).json(error);
   }
 };
 
-module.exports = authorizationController;
+// Get profile details about logged-in user
+const profile = (req, res) => {
+  // #swagger.tags = ["Authorization Requests"]
+  // #swagger.description = "Get profile details about the user"
+  try {
+    res.json(req.oidc.user);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+};
+
+module.exports = { authorize, profile };

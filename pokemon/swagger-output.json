@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Pokemon API",
-    "description": "This API gets Trainer and Pokedex data",
+    "description": "This API gets trainer, pokedex, gym, and pokemon game data.\n      \n*NOTE*: Some routes will require authorization to test. Please log in at https://branden-cse341-pokemon.onrender.com/authorization/login to test these routes",
     "version": "1.0.0"
   },
   "host": "",
@@ -19,8 +19,45 @@
         "responses": {}
       }
     },
+    "/authorization/": {
+      "get": {
+        "tags": [
+          "Authorization Requests"
+        ],
+        "description": "Inform user if they are logged in or not",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/authorization/profile": {
+      "get": {
+        "tags": [
+          "Authorization Requests"
+        ],
+        "description": "Get profile details about the user",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/trainers/": {
       "get": {
+        "tags": [
+          "Trainer Requests"
+        ],
         "description": "Get all trainers",
         "parameters": [],
         "responses": {
@@ -33,7 +70,10 @@
         }
       },
       "post": {
-        "description": "Create new trainer",
+        "tags": [
+          "Trainer Requests"
+        ],
+        "description": "Create new trainer - (NOTE: This route requires authorization. Please see API description above for authorization details)",
         "parameters": [
           {
             "name": "body",
@@ -75,6 +115,9 @@
     },
     "/trainers/{id}": {
       "get": {
+        "tags": [
+          "Trainer Requests"
+        ],
         "description": "Get one trainer via ID",
         "parameters": [
           {
@@ -97,7 +140,10 @@
         }
       },
       "put": {
-        "description": "Update a trainer via ID",
+        "tags": [
+          "Trainer Requests"
+        ],
+        "description": "Update a trainer via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)",
         "parameters": [
           {
             "name": "id",
@@ -143,7 +189,10 @@
         }
       },
       "delete": {
-        "description": "Delete a trainer via ID",
+        "tags": [
+          "Trainer Requests"
+        ],
+        "description": "Delete a trainer via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)",
         "parameters": [
           {
             "name": "id",
@@ -167,6 +216,9 @@
     },
     "/pokedex/": {
       "get": {
+        "tags": [
+          "Pokedex Requests"
+        ],
         "description": "Get all pokemon",
         "parameters": [],
         "responses": {
@@ -179,7 +231,10 @@
         }
       },
       "post": {
-        "description": "Create new pokemon",
+        "tags": [
+          "Pokedex Requests"
+        ],
+        "description": "Create new pokemon - (NOTE: This route requires authorization. Please see API description above for authorization details)",
         "parameters": [
           {
             "name": "body",
@@ -227,6 +282,9 @@
     },
     "/pokedex/{id}": {
       "get": {
+        "tags": [
+          "Pokedex Requests"
+        ],
         "description": "Get one pokemon via ID",
         "parameters": [
           {
@@ -249,7 +307,10 @@
         }
       },
       "put": {
-        "description": "Update a pokemon via ID",
+        "tags": [
+          "Pokedex Requests"
+        ],
+        "description": "Update a pokemon via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)",
         "parameters": [
           {
             "name": "id",
@@ -301,7 +362,314 @@
         }
       },
       "delete": {
-        "description": "Delete a pokemon via ID",
+        "tags": [
+          "Pokedex Requests"
+        ],
+        "description": "Delete a pokemon via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/gyms/": {
+      "get": {
+        "tags": [
+          "Gym Requests"
+        ],
+        "description": "Get all gyms",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Gym Requests"
+        ],
+        "description": "Create new gym - (NOTE: This route requires authorization. Please see API description above for authorization details)",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "gymBadgeName": {
+                  "example": "any"
+                },
+                "gymLocation": {
+                  "example": "any"
+                },
+                "gymLeaderName": {
+                  "example": "any"
+                },
+                "gymPokemonType": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/gyms/{id}": {
+      "get": {
+        "tags": [
+          "Gym Requests"
+        ],
+        "description": "Get one gym via ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Gym Requests"
+        ],
+        "description": "Update a gym via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "gymBadgeName": {
+                  "example": "any"
+                },
+                "gymLocation": {
+                  "example": "any"
+                },
+                "gymLeaderName": {
+                  "example": "any"
+                },
+                "gymPokemonType": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Gym Requests"
+        ],
+        "description": "Delete a gym via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/games/": {
+      "get": {
+        "tags": [
+          "Game Requests"
+        ],
+        "description": "Get all games",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Game Requests"
+        ],
+        "description": "Create new game - (NOTE: This route requires authorization. Please see API description above for authorization details)",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "gameName": {
+                  "example": "any"
+                },
+                "releaseDate": {
+                  "example": "any"
+                },
+                "platform": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/games/{id}": {
+      "get": {
+        "tags": [
+          "Game Requests"
+        ],
+        "description": "Get one game via ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Game Requests"
+        ],
+        "description": "Update a game via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "gameName": {
+                  "example": "any"
+                },
+                "releaseDate": {
+                  "example": "any"
+                },
+                "platform": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Game Requests"
+        ],
+        "description": "Delete a game via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)",
         "parameters": [
           {
             "name": "id",

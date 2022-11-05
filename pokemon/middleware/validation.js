@@ -37,3 +37,33 @@ module.exports.pokedexValidation = [
     "Must be in array format. If no evolutions, value must be an empty array."
   ).isArray()
 ];
+
+module.exports.gamesValidation = [
+  check("gameName", "Game name is required. Must be at least 3 characters long.")
+    .isString()
+    .isLength({ min: 3 })
+    .notEmpty(),
+  check("releaseDate", "Release date is required. Date format: 12/31/2022")
+    .isString()
+    .isLength(10)
+    .notEmpty(),
+  check("platform", "Must include at least one platform. Must be in array format.")
+    .isArray()
+    .notEmpty()
+];
+
+module.exports.gymsValidation = [
+  check("gymBadgeName", "Gym badge name is required. Must be at least 3 characters long.")
+    .isString()
+    .isLength({ min: 3 })
+    .notEmpty(),
+  check("gymLocation", "Gym location is required. Please enter city name.")
+    .isString()
+    .isLength({ min: 3 })
+    .notEmpty(),
+  check("gymLeaderName", "Gym leader name is required. Must be at least 3 characters long.")
+    .isString()
+    .isLength({ min: 3 })
+    .notEmpty(),
+  check("gymPokemonType", "Gym's pokemon type is required.").isString().notEmpty()
+];

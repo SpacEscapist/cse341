@@ -4,6 +4,7 @@ const { validationResult } = require("express-validator");
 
 // Get all pokemon
 const getAllPokemon = async (req, res) => {
+  // #swagger.tags = ["Pokedex Requests"]
   // #swagger.description = "Get all pokemon"
   try {
     const allPokemon = await Pokedex.find();
@@ -15,6 +16,7 @@ const getAllPokemon = async (req, res) => {
 
 // Get one pokemon
 const getOnePokemon = async (req, res) => {
+  // #swagger.tags = ["Pokedex Requests"]
   // #swagger.description = "Get one pokemon via ID"
 
   // Check for valid ID
@@ -35,7 +37,8 @@ const getOnePokemon = async (req, res) => {
 
 // Create new pokemon
 const createPokemon = async (req, res) => {
-  // #swagger.description = "Create new pokemon"
+  // #swagger.tags = ["Pokedex Requests"]
+  // #swagger.description = "Create new pokemon - (NOTE: This route requires authorization. Please see API description above for authorization details)"
 
   // Check for input errors
   const errors = validationResult(req);
@@ -63,7 +66,8 @@ const createPokemon = async (req, res) => {
 
 // Update a pokemon by ID
 const updatePokemon = async (req, res) => {
-  // #swagger.description = "Update a pokemon via ID"
+  // #swagger.tags = ["Pokedex Requests"]
+  // #swagger.description = "Update a pokemon via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)"
 
   // Check for valid ID
   if (!ObjectId.isValid(req.params.id)) {
@@ -96,7 +100,8 @@ const updatePokemon = async (req, res) => {
 
 // Delete a pokemon by ID
 const deletePokemon = async (req, res) => {
-  // #swagger.description = "Delete a pokemon via ID"
+  // #swagger.tags = ["Pokedex Requests"]
+  // #swagger.description = "Delete a pokemon via ID - (NOTE: This route requires authorization. Please see API description above for authorization details)"
 
   // Check for valid ID
   if (!ObjectId.isValid(req.params.id)) {
