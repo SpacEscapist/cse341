@@ -134,7 +134,7 @@ Content-Type: application/json
 {
     "gameName": "Pokemon Gold",
     "releaseDate": "10/15/2000",
-    "platform": "Game Boy Color",
+    "platform": ["Game Boy Color"],
 }
 
 ### Update a game
@@ -144,7 +144,7 @@ Content-Type: application/json
 {
     "gameName": "Pokemon Crystal",
     "releaseDate": "07/29/2001",
-    "platform": "Game Boy Color",
+    "platform": ["Game Boy Color"],
 }
 
 ### Delete a game
@@ -282,7 +282,7 @@ Content-Type: application/json
 {
     "gameName": "Pokemon Gold",
     "releaseDate": "10/15/2000",
-    "platform": "Game Boy Color",
+    "platform": ["Game Boy Color"],
 }
 
 ### Update a game
@@ -292,7 +292,7 @@ Content-Type: application/json
 {
     "gameName": "Pokemon Crystal",
     "releaseDate": "07/29/2001",
-    "platform": "Game Boy Color",
+    "platform": ["Game Boy Color"],
 }
 
 ### Delete a game
