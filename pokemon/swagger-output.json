@@ -2,13 +2,12 @@
   "swagger": "2.0",
   "info": {
     "title": "Pokemon API",
-    "description": "This API gets trainer, pokedex, gym, and pokemon game data.\n      \n*NOTE*: Some routes will require authorization to test. Please log in at https://branden-cse341-pokemon.onrender.com/authorization/login to test these routes",
+    "description": "This API gets trainer, pokedex, gym, and pokemon game data.\n      \n*NOTE*: Some routes will require authorization to test. To test these routes, please log in here https://branden-cse341-pokemon.onrender.com/authorization/login\n      \nOnce finished, you may log out here https://branden-cse341-pokemon.onrender.com/authorization/logout",
     "version": "1.0.0"
   },
   "host": "",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {

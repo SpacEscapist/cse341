@@ -5,7 +5,8 @@ const doc = {
   info: {
     title: "Pokemon API",
     description: `This API gets trainer, pokedex, gym, and pokemon game data.
-      \n*NOTE*: Some routes will require authorization to test. Please log in at https://branden-cse341-pokemon.onrender.com/authorization/login to test these routes`
+      \n*NOTE*: Some routes will require authorization to test. To test these routes, please log in here https://branden-cse341-pokemon.onrender.com/authorization/login
+      \nOnce finished, you may log out here https://branden-cse341-pokemon.onrender.com/authorization/logout`
   },
   host: "",
   schemes: ["http", "https"]
